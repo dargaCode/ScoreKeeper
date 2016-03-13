@@ -27,8 +27,6 @@ function clickP1() {
   if (!isGameOver()) {
     scores.p1++;
     scores.lastScorer = "p1";
-    p2Display.classList.remove("last-scorer");
-    p1Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 1 Scores!";
     console.log("p1 scores!");
   }
@@ -39,8 +37,6 @@ function clickP2() {
   if (!isGameOver()) {
     scores.p2++;
     scores.lastScorer = "p2";
-    p1Display.classList.remove("last-scorer");
-    p2Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 2 Scores!";
     console.log("p2 scores!");
   }
@@ -74,6 +70,18 @@ function declareWinner() {
   }
 }
 
+function styleLastScorer() {
+  p1Display.classList.remove("last-scorer");
+  p2Display.classList.remove("last-scorer");
+
+  if (scores.lastScorer === "p1") {
+    p1Display.classList.add("last-scorer");
+  }
+  else if (scores.lastScorer === "p2") {
+    p2Display.classList.add("last-scorer");
+  }
+}
+
 function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
@@ -94,6 +102,8 @@ function updateUi() {
   else {
     resetButton.disabled = false;
   }
+
+  styleLastScorer();
 }
 
 // MAIN
