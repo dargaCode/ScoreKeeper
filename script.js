@@ -15,7 +15,7 @@ var statusHeading = document.querySelector(".status-heading");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
-var scoreDial = document.querySelector(".max-score-input");
+var maxScoreInput = document.querySelector(".max-score-input");
 
 // EVENTS
 
@@ -85,7 +85,7 @@ function styleLastScorer() {
 function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
-  scoreDial.value = scores.max;
+  maxScoreInput.value = scores.max;
 
   if (isGameOver()) {
     declareWinner();
