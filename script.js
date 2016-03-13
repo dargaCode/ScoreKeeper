@@ -22,6 +22,7 @@ var maxScoreInput = document.querySelector(".max-score-input");
 p1Button.addEventListener("click", clickP1);
 p2Button.addEventListener("click", clickP2);
 resetButton.addEventListener("click", clickReset);
+maxScoreInput.addEventListener("change", changeMaxScore)
 
 function clickP1() {
   if (!isGameOver()) {
@@ -48,6 +49,11 @@ function clickReset() {
   scores.p2 = 0;
   scores.lastScorer = null;
   console.log("reset scores");
+  updateUi();
+}
+
+function changeMaxScore() {
+  scores.max = Number(this.value);
   updateUi();
 }
 
