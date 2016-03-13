@@ -14,7 +14,7 @@ var winScore = document.querySelector(".score-to-win");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
-var scoreDial = document.querySelector("input");
+var scoreDial = document.querySelector(".max-score-input");
 
 // EVENTS
 
