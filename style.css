@@ -46,3 +46,7 @@ label {
   width: 30px;
   text-align: center;
 }
+
+.last-scorer {
+  color: limegreen;
+}
