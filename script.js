@@ -3,6 +3,7 @@ var DEFAULT_MAX = 5;
 var scores = {
   p1: 0,
   p2: 0,
+  lastScorer: null,
   max: DEFAULT_MAX
 };
 
@@ -25,6 +26,7 @@ resetButton.addEventListener("click", clickReset);
 function clickP1() {
   if (!isGameOver()) {
     scores.p1++;
+    scores.lastScorer = "p1";
     p2Display.classList.remove("last-scorer");
     p1Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 1 Scores!";
@@ -36,6 +38,7 @@ function clickP1() {
 function clickP2() {
   if (!isGameOver()) {
     scores.p2++;
+    scores.lastScorer = "p2";
     p1Display.classList.remove("last-scorer");
     p2Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 2 Scores!";
@@ -47,6 +50,7 @@ function clickP2() {
 function clickReset() {
   scores.p1 = 0;
   scores.p2 = 0;
+  scores.lastScorer = null;
   console.log("reset scores");
   updateUi();
 }
