@@ -79,6 +79,8 @@ function updateUi() {
 
   if (isGameNew()) {
     statusHeading.innerHTML = "Let's Play!";
+    p1Button.disabled = false;
+    p2Button.disabled = false;
     resetButton.disabled = true;
   }
   else {
