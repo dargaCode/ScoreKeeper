@@ -98,17 +98,20 @@ function updateUi() {
     p1Button.disabled = true;
     p2Button.disabled = true;
     resetButton.disabled = false;
+    maxScoreInput.disabled = true;
   }
   else if (isGameNew()) {
     statusHeading.innerHTML = "Let's Play!";
     p1Button.disabled = false;
     p2Button.disabled = false;
     resetButton.disabled = true;
+    maxScoreInput.disabled = false;
   }
   else {
     p1Button.disabled = false;
     p2Button.disabled = false;
     resetButton.disabled = false;
+    maxScoreInput.disabled = false;
   }
 
   styleLastScorer();
