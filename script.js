@@ -8,8 +8,8 @@ var scores = {
 
 // SELECTORS
 
-var p1Score = document.querySelector(".p1-score");
-var p2Score = document.querySelector(".p2-score");
+var p1Display = document.querySelector(".p1-score");
+var p2Display = document.querySelector(".p2-score");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
@@ -48,8 +48,8 @@ function clickReset() {
 // LOGIC
 
 function updateUi() {
-  p1Score.innerHTML = scores.p1;
-  p2Score.innerHTML = scores.p2;
+  p1Display.innerHTML = scores.p1;
+  p2Display.innerHTML = scores.p2;
   scoreDial.value = scores.max;
 }
 
