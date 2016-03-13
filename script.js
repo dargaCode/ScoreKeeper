@@ -23,7 +23,7 @@ p2Button.addEventListener("click", clickP2);
 resetButton.addEventListener("click", clickReset);
 
 function clickP1() {
-  if (scores.p1 < scores.max) {
+  if (!isGameOver()) {
     scores.p1++;
     console.log("p1 scores!");
   }
@@ -31,7 +31,7 @@ function clickP1() {
 }
 
 function clickP2() {
-  if (scores.p2 < scores.max) {
+  if (!isGameOver()) {
     scores.p2++;
     console.log("p2 scores!");
   }
@@ -46,6 +46,10 @@ function clickReset() {
 }
 
 // LOGIC
+
+function isGameOver() {
+  return scores.p1 === scores.max || scores.p2 === scores.max;
+}
 
 function updateUi() {
   p1Display.innerHTML = scores.p1;
