@@ -43,7 +43,6 @@ function clickP2() {
 function clickReset() {
   scores.p1 = 0;
   scores.p2 = 0;
-  statusHeading.innerHTML = "New Game Starting...";
   console.log("reset scores");
   updateUi();
 }
@@ -79,6 +78,7 @@ function updateUi() {
   }
 
   if (isGameNew()) {
+    statusHeading.innerHTML = "New Game Starting...";
     resetButton.disabled = true;
   }
   else {
