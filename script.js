@@ -11,11 +11,11 @@ var scores = {
 
 var p1Display = document.querySelector(".p1-score");
 var p2Display = document.querySelector(".p2-score");
+var statusHeading = document.querySelector(".status-heading");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
 var scoreDial = document.querySelector(".max-score-input");
-var statusHeading = document.querySelector(".status-heading");
 
 // EVENTS
 
