@@ -25,6 +25,8 @@ resetButton.addEventListener("click", clickReset);
 function clickP1() {
   if (!isGameOver()) {
     scores.p1++;
+    p2Display.classList.remove("last-scorer");
+    p1Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 1 Scores!";
     console.log("p1 scores!");
   }
@@ -34,6 +36,8 @@ function clickP1() {
 function clickP2() {
   if (!isGameOver()) {
     scores.p2++;
+    p1Display.classList.remove("last-scorer");
+    p2Display.classList.add("last-scorer");
     statusHeading.innerHTML = "Player 2 Scores!";
     console.log("p2 scores!");
   }
