@@ -54,6 +54,15 @@ function isGameOver() {
   return scores.p1 === scores.max || scores.p2 === scores.max;
 }
 
+function declareWinner() {
+  if (scores.p1 > scores.p2) {
+    statusHeading.innerHTML = "Player 1 Wins!";
+  }
+  else if (scores.p2 > scores.p1) {
+    statusHeading.innerHTML = "Player 2 Wins!";
+  }
+}
+
 function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
