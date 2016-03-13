@@ -60,7 +60,7 @@ function changeMaxScore() {
 // LOGIC
 
 function isGameOver() {
-  return scores.p1 === scores.max || scores.p2 === scores.max;
+  return scores.p1 >= scores.max || scores.p2 >= scores.max;
 }
 
 function isGameNew() {
