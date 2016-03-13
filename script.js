@@ -14,14 +14,15 @@ var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
 var scoreDial = document.querySelector(".max-score-input");
+var statusHeading = document.querySelector(".status-heading");
 
 // EVENTS
 
-p1Button.addEventListener("click", incrementP1);
-p2Button.addEventListener("click", incrementP2);
-resetButton.addEventListener("click", resetScores);
+p1Button.addEventListener("click", clickP1);
+p2Button.addEventListener("click", clickP2);
+resetButton.addEventListener("click", clickReset);
 
-function incrementP1() {
+function clickP1() {
   if (scores.p1 < scores.max) {
     scores.p1++;
     console.log("p1 scores!");
@@ -29,7 +30,7 @@ function incrementP1() {
   updateUi();
 }
 
-function incrementP2() {
+function clickP2() {
   if (scores.p2 < scores.max) {
     scores.p2++;
     console.log("p2 scores!");
@@ -37,7 +38,7 @@ function incrementP2() {
   updateUi();
 }
 
-function resetScores() {
+function clickReset() {
   scores.p1 = 0;
   scores.p2 = 0;
   console.log("reset scores");
