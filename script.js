@@ -3,7 +3,7 @@ var DEFAULT_MAX = 5;
 var scores = {
   p1: 0,
   p2: 0,
-  lastScorer: null,
+  lastScorer: null, //null, "p1", or "p2"
   max: DEFAULT_MAX
 };
 
