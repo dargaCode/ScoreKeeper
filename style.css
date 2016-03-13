@@ -30,3 +30,16 @@ h3 {
 button {
   margin: 0 8px;
 }
+
+button:hover {
+  background-color: #f5f5f5;
+}
+
+label {
+  font-size: 14px;
+}
+
+.max-score-input {
+  width: 30px;
+  text-align: center;
+}
