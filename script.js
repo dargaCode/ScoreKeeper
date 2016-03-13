@@ -74,6 +74,15 @@ function updateUi() {
 
   if (isGameOver()) {
     declareWinner();
+    p1Button.disabled = true;
+    p2Button.disabled = true;
+  }
+
+  if (isGameNew()) {
+    resetButton.disabled = true;
+  }
+  else {
+    resetButton.disabled = false;
   }
 }
 
