@@ -25,6 +25,7 @@ resetButton.addEventListener("click", clickReset);
 function clickP1() {
   if (!isGameOver()) {
     scores.p1++;
+    statusHeading.innerHTML = "Player 1 Scores!";
     console.log("p1 scores!");
   }
   updateUi();
@@ -33,6 +34,7 @@ function clickP1() {
 function clickP2() {
   if (!isGameOver()) {
     scores.p2++;
+    statusHeading.innerHTML = "Player 2 Scores!";
     console.log("p2 scores!");
   }
   updateUi();
@@ -41,6 +43,7 @@ function clickP2() {
 function clickReset() {
   scores.p1 = 0;
   scores.p2 = 0;
+  statusHeading.innerHTML = "Score Reset";
   console.log("reset scores");
   updateUi();
 }
