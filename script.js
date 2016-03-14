@@ -15,7 +15,7 @@ var statusHeading = document.querySelector(".status-heading");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
-var targetScoreInput = document.querySelector(".max-score-input");
+var targetScoreInput = document.querySelector(".target-score-input");
 
 // EVENTS
 
