@@ -74,6 +74,11 @@ function isGameTied() {
   return scores.p1 === scores.p2 && scores.p1 > 0;
 }
 
+function isGameSuddenDeath() {
+  // A 0-0 game with target of 1 is sudden death.
+  return scores.p1 === scores.p2 && scores.p1 + 1 === scores.target;
+}
+
 function isGameOver() {
   return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
