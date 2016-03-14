@@ -70,12 +70,12 @@ function isGameOver() {
   return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
 
-function isValidTargetScore(target) {
-  return target >= scores.minTarget && target <= MAX_TARGET;
-}
-
 function isGameNew() {
   return scores.p1 === 0 && scores.p2 === 0;
+}
+
+function isValidTargetScore(target) {
+  return target >= scores.minTarget && target <= MAX_TARGET;
 }
 
 function getMinTargetScore() {
