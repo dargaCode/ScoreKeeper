@@ -137,8 +137,14 @@ function updateUi() {
 
 function getStatus() {
   var status = "";
-  if (isGameNew()) {
+  if (isGameSuddenDeath()) {
+    status = "SUDDEN DEATH!";
+  }
+  else if (isGameNew()) {
     status = "Let's Play!";
+  }
+  else if (isGameTied()) {
+    status = "Tie Game!";
   }
   else if (scores.lastScorer === "p1") {
     if (isGameOver()) {
