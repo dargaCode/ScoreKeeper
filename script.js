@@ -1,10 +1,13 @@
 var DEFAULT_TARGET = 5;
+var DEFAULT_MIN_TARGET = 1;
+var MAX_TARGET = 20;
 
 var scores = {
   p1: 0,
   p2: 0,
   lastScorer: null, //null, "p1", or "p2"
-  target: DEFAULT_TARGET
+  target: DEFAULT_TARGET,
+  minTarget: DEFAULT_MIN_TARGET
 };
 
 // SELECTORS
