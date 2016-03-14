@@ -22,7 +22,7 @@ var targetScoreInput = document.querySelector(".max-score-input");
 p1Button.addEventListener("click", clickP1);
 p2Button.addEventListener("click", clickP2);
 resetButton.addEventListener("click", clickReset);
-targetScoreInput.addEventListener("change", changeMaxScore)
+targetScoreInput.addEventListener("change", changeTargetScore)
 
 function clickP1() {
   if (!isGameOver()) {
@@ -52,7 +52,7 @@ function clickReset() {
   updateUi();
 }
 
-function changeMaxScore() {
+function changeTargetScore() {
   scores.target = Number(this.value);
   updateUi();
 }
