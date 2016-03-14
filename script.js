@@ -31,7 +31,6 @@ function clickP1() {
   if (!isGameOver()) {
     scores.p1++;
     scores.lastScorer = "p1";
-    statusHeading.innerHTML = "Player 1 Scores!";
     console.log("p1 scores!");
   }
   updateUi();
@@ -41,7 +40,6 @@ function clickP2() {
   if (!isGameOver()) {
     scores.p2++;
     scores.lastScorer = "p2";
-    statusHeading.innerHTML = "Player 2 Scores!";
     console.log("p2 scores!");
   }
   updateUi();
@@ -80,15 +78,6 @@ function isGameNew() {
   return scores.p1 === 0 && scores.p2 === 0;
 }
 
-function declareWinner() {
-  if (scores.p1 > scores.p2) {
-    statusHeading.innerHTML = "Player 1 Wins!";
-  }
-  else if (scores.p2 > scores.p1) {
-    statusHeading.innerHTML = "Player 2 Wins!";
-  }
-}
-
 function getMinTargetScore() {
   // let target score move during game, but never
   // low enough to actually end the game
@@ -115,14 +104,12 @@ function updateUi() {
   targetScoreInput.min = getMinTargetScore();
 
   if (isGameOver()) {
-    declareWinner();
     p1Button.disabled = true;
     p2Button.disabled = true;
     resetButton.disabled = false;
     targetScoreInput.disabled = true;
   }
   else if (isGameNew()) {
-    statusHeading.innerHTML = "Let's Play!";
     p1Button.disabled = false;
     p2Button.disabled = false;
     resetButton.disabled = true;
@@ -136,6 +123,7 @@ function updateUi() {
   }
 
   styleLastScorer();
+  statusHeading.innerHTML = getStatus();
 }
 
 function getStatus() {
