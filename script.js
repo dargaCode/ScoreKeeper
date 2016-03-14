@@ -141,7 +141,7 @@ function getStatus() {
     status = "SUDDEN DEATH!";
   }
   else if (isGameNew()) {
-    status = "Let's Play!";
+    status = "Game On!";
   }
   else if (isGameTied()) {
     status = "Tie Game!";
