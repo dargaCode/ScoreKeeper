@@ -62,6 +62,10 @@ function changeTargetScore() {
 
 // LOGIC
 
+function isValidTargetScore(target) {
+  return target >= scores.minTarget && target <= MAX_TARGET;
+}
+
 function isGameOver() {
   return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
