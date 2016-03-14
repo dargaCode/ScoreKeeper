@@ -66,12 +66,12 @@ function changeTargetScore() {
 
 // LOGIC
 
-function isGameOver() {
-  return scores.p1 >= scores.target || scores.p2 >= scores.target;
-}
-
 function isGameNew() {
   return scores.p1 === 0 && scores.p2 === 0;
+}
+
+function isGameOver() {
+  return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
 
 function isValidTargetScore(target) {
