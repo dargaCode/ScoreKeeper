@@ -1,10 +1,10 @@
-var DEFAULT_MAX = 5;
+var DEFAULT_TARGET = 5;
 
 var scores = {
   p1: 0,
   p2: 0,
   lastScorer: null, //null, "p1", or "p2"
-  max: DEFAULT_MAX
+  target: DEFAULT_TARGET
 };
 
 // SELECTORS
@@ -53,14 +53,14 @@ function clickReset() {
 }
 
 function changeMaxScore() {
-  scores.max = Number(this.value);
+  scores.target = Number(this.value);
   updateUi();
 }
 
 // LOGIC
 
 function isGameOver() {
-  return scores.p1 >= scores.max || scores.p2 >= scores.max;
+  return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
 
 function isGameNew() {
@@ -91,7 +91,7 @@ function styleLastScorer() {
 function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
-  maxScoreInput.value = scores.max;
+  maxScoreInput.value = scores.target;
 
   if (isGameOver()) {
     declareWinner();
