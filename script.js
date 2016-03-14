@@ -56,7 +56,13 @@ function clickReset() {
 }
 
 function changeTargetScore() {
-  scores.target = Number(this.value);
+  var target = Number(this.value);
+  if (isValidTargetScore(target)) {
+    scores.target = target;
+  }
+  else {
+    scores.target = MAX_TARGET;
+  }
   updateUi();
 }
 
