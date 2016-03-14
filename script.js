@@ -15,14 +15,14 @@ var statusHeading = document.querySelector(".status-heading");
 var p1Button = document.querySelector(".p1-btn");
 var p2Button = document.querySelector(".p2-btn");
 var resetButton = document.querySelector(".reset-btn");
-var maxScoreInput = document.querySelector(".max-score-input");
+var targetScoreInput = document.querySelector(".max-score-input");
 
 // EVENTS
 
 p1Button.addEventListener("click", clickP1);
 p2Button.addEventListener("click", clickP2);
 resetButton.addEventListener("click", clickReset);
-maxScoreInput.addEventListener("change", changeMaxScore)
+targetScoreInput.addEventListener("change", changeMaxScore)
 
 function clickP1() {
   if (!isGameOver()) {
@@ -91,27 +91,27 @@ function styleLastScorer() {
 function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
-  maxScoreInput.value = scores.target;
+  targetScoreInput.value = scores.target;
 
   if (isGameOver()) {
     declareWinner();
     p1Button.disabled = true;
     p2Button.disabled = true;
     resetButton.disabled = false;
-    maxScoreInput.disabled = true;
+    targetScoreInput.disabled = true;
   }
   else if (isGameNew()) {
     statusHeading.innerHTML = "Let's Play!";
     p1Button.disabled = false;
     p2Button.disabled = false;
     resetButton.disabled = true;
-    maxScoreInput.disabled = false;
+    targetScoreInput.disabled = false;
   }
   else {
     p1Button.disabled = false;
     p2Button.disabled = false;
     resetButton.disabled = false;
-    maxScoreInput.disabled = false;
+    targetScoreInput.disabled = false;
   }
 
   styleLastScorer();
