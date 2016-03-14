@@ -70,6 +70,10 @@ function isGameNew() {
   return scores.p1 === 0 && scores.p2 === 0;
 }
 
+function isGameTied() {
+  return scores.p1 === scores.p2 && scores.p1 > 0;
+}
+
 function isGameOver() {
   return scores.p1 >= scores.target || scores.p2 >= scores.target;
 }
