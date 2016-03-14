@@ -138,6 +138,30 @@ function updateUi() {
   styleLastScorer();
 }
 
+function getStatus() {
+  var status = "";
+  if (isGameNew()) {
+    status = "Let's Play!";
+  }
+  else if (scores.lastScorer === "p1") {
+    if (isGameOver()) {
+      status = "Player 1 Wins!";
+    }
+    else {
+      status = "Player 1 Scores!";
+    }
+  }
+  else if (scores.lastScorer === "p2") {
+    if (isGameOver()) {
+      status = "Player 2 Wins!";
+    }
+    else {
+      status = "Player 2 Scores!";
+    }
+  }
+  return status;
+}
+
 // MAIN
 
 updateUi();
