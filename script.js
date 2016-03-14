@@ -89,6 +89,13 @@ function declareWinner() {
   }
 }
 
+function getMinTargetScore() {
+  // let target score move during game, but never
+  // low enough to actually end the game
+  var highScore = Math.max(scores.p1, scores.p2);
+  return highScore + 1;
+}
+
 function styleLastScorer() {
   p1Display.classList.remove("last-scorer");
   p2Display.classList.remove("last-scorer");
