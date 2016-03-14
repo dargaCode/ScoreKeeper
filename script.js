@@ -112,6 +112,7 @@ function updateUi() {
   p1Display.innerHTML = scores.p1;
   p2Display.innerHTML = scores.p2;
   targetScoreInput.value = scores.target;
+  targetScoreInput.min = getMinTargetScore();
 
   if (isGameOver()) {
     declareWinner();
