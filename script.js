@@ -151,7 +151,10 @@ function getStatus() {
     status = "Tie Game!";
   }
   else if (scores.lastScorer === "p1") {
-    if (isGameOver()) {
+    if (isGameShutout()) {
+      status = "Player 1 Shuts Out Player 2!"
+    }
+    else if (isGameOver()) {
       status = "Player 1 Wins!";
     }
     else {
@@ -159,7 +162,10 @@ function getStatus() {
     }
   }
   else if (scores.lastScorer === "p2") {
-    if (isGameOver()) {
+    if (isGameShutout()) {
+      status = "Player 2 Shuts Out Player 1!";
+    }
+    else if (isGameOver()) {
       status = "Player 2 Wins!";
     }
     else {
