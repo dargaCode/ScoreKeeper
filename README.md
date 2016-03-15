@@ -1,7 +1,7 @@
 # Udemy Score Keeper
 <strong>Language: HTML/CSS/JS</strong>
 
-Here’s my first project for the Udemy course I’m taking: A simple scoreboard webpage via DOM manipulation in JavaScript.
+Here’s my first project for <a href="https://www.udemy.com/the-web-developer-bootcamp/">the Udemy course I’m taking</a>: A simple scoreboard webpage via DOM manipulation in JavaScript.
 
 It’s nice to be writing some JS again. I’m tempted to dive deeper into the software design aspect of this one, but I’ll keep moving.
 
