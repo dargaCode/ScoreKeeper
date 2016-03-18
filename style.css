@@ -47,6 +47,17 @@ button:hover {
   cursor:pointer;
 }
 
+.reset-btn {
+  /*background-color: #E16D51;*/
+  background-color: #D58875;
+}
+
+.reset-btn:hover {
+  /*background-color: #FF6138;*/
+  background-color: #FC9479;
+  border: 3px solid #E16D51;
+}
+
 label {
   font-size: 14px;
 }
