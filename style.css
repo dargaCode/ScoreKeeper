@@ -58,6 +58,13 @@ button:hover {
   border: 3px solid #E16D51;
 }
 
+button:disabled,
+.reset-btn:disabled {
+  background-color: #CCCCCC;
+  border: none;
+  cursor: auto;
+}
+
 label {
   font-size: 14px;
 }
