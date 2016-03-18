@@ -29,10 +29,10 @@ h3 {
 }
 
 button {
-  margin: 0 8px;
   width: 70px;
   height: 40px;
   border-radius: 5px;
+  margin: 0 8px;
 }
 
 button:hover {
