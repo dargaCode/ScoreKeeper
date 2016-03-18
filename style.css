@@ -57,17 +57,17 @@ button:hover {
 
 /*ROW 2*/
 
-.reset-btn {
+#reset-btn {
   background-color: #D58875;
 }
 
-.reset-btn:hover {
+#reset-btn:hover {
   background-color: #FC9479;
   border: 3px solid #E16D51;
 }
 
 button:disabled,
-.reset-btn:disabled {
+#reset-btn:disabled {
   background-color: #CCCCCC;
   border: none;
   cursor: auto;
@@ -79,7 +79,7 @@ label {
   font-size: 14px;
 }
 
-.target-score-input {
+#target-score-input {
   background-color: #BEEB9F;
   height: 18px;
   width: 35px;
@@ -91,6 +91,6 @@ label {
   margin-left: 3px;
 }
 
-.target-score-input:disabled {
+#target-score-input:disabled {
   background-color: #D3D3D3;
 }

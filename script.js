@@ -12,13 +12,13 @@ var scores = {
 
 // SELECTORS
 
-var p1Display = document.querySelector(".p1-score");
-var p2Display = document.querySelector(".p2-score");
-var statusHeading = document.querySelector(".status-heading");
-var p1Button = document.querySelector(".p1-btn");
-var p2Button = document.querySelector(".p2-btn");
-var resetButton = document.querySelector(".reset-btn");
-var targetScoreInput = document.querySelector(".target-score-input");
+var p1Display = document.querySelector("#p1-score");
+var p2Display = document.querySelector("#p2-score");
+var statusHeading = document.querySelector("#status-heading");
+var p1Button = document.querySelector("#p1-btn");
+var p2Button = document.querySelector("#p2-btn");
+var resetButton = document.querySelector("#reset-btn");
+var targetScoreInput = document.querySelector("#target-score-input");
 
 // EVENTS
 
