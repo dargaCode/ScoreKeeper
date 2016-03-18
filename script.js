@@ -152,7 +152,7 @@ function getStatus() {
   }
   else if (scores.lastScorer === "p1") {
     if (isGameShutout()) {
-      status = "Player 1 Shuts Out Player 2!"
+      status = "Player 1 Wins a Shutout!"
     }
     else if (isGameOver()) {
       status = "Player 1 Wins!";
@@ -163,7 +163,7 @@ function getStatus() {
   }
   else if (scores.lastScorer === "p2") {
     if (isGameShutout()) {
-      status = "Player 2 Shuts Out Player 1!";
+      status = "Player 2 Wins a Shutout!";
     }
     else if (isGameOver()) {
       status = "Player 2 Wins!";
