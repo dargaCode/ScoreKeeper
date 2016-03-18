@@ -84,7 +84,9 @@ function isGameOver() {
 }
 
 function isGameShutout() {
-  return isGameOver() && scores.target > 1 && (scores.p1 === 0 || scores.p2 === 0);
+  var eitherPlayerScoreless = scores.p1 === 0 || scores.p2 === 0;
+  var highEnoughTarget = scores.target > 1;
+  return isGameOver() && highEnoughTarget && eitherPlayerScoreless;
 }
 
 function isValidTargetScore(target) {
