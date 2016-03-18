@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 body {
   background-color: #FFFF9D;
   font-family: Fjalla, sans-serif;
@@ -30,6 +32,9 @@ h3 {
   margin-bottom: 16px;
 }
 
+
+/*ROW 1*/
+
 button {
   background-color: #79BD8F;
   font-size: 14px;
@@ -47,6 +52,8 @@ button:hover {
   cursor:pointer;
 }
 
+/*ROW 2*/
+
 .reset-btn {
   background-color: #D58875;
 }
@@ -62,6 +69,8 @@ button:disabled,
   border: none;
   cursor: auto;
 }
+
+/*ROW 3*/
 
 label {
   font-size: 14px;
